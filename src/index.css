@@ -147,6 +147,9 @@
 	.paddingX {
 		@apply sm:px-16 px-6;
 	}
+	.paddingY {
+		@apply sm:py-16 py-6;
+	}
 	.flexCenter {
 		@apply flex justify-center items-center;
 	}
@@ -155,5 +158,8 @@
 	}
 	.boxWidth {
 		@apply xl:max-w-[1280px] w-full;
+	}
+	.paragraph {
+		@apply font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px];
 	}
 }
