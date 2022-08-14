@@ -2,8 +2,29 @@ import React from "react";
 import { features } from "../constants";
 import Button from "./Button";
 const Business = () => {
-	const FeatureCard = () => {
-		return <div></div>;
+	const FeatureCard = ({ icon, title, content, index }) => {
+		return (
+			<div
+				className={`flex flex-row p-6 rounded-[20px] ${
+					index !== features.length - 1 ? "mb-6" : "mb-0"
+				} feature-card`}>
+				<div className="w-[64px] h-[64px] rounded-full flexCenter bg-dimBlue">
+					<img
+						src={icon}
+						alt="icon"
+						className="w-[50%] h-[50%] object-contain"
+					/>
+				</div>
+				<div className="flex-1 flex flex-col  ml-3">
+					<h4 className="font-poppins font-semibold text-white text-[18px] leading-[23px] mb-1">
+						{title}
+					</h4>
+					<p className="font-poppins font-normal text-dimWhite text-[16px] leading-[24px] mb-1">
+						{content}
+					</p>
+				</div>
+			</div>
+		);
 	};
 	return (
 		<section id="features" className="flex md:flex-row flex-col paddingY">
@@ -21,7 +42,7 @@ const Business = () => {
 			</div>
 
 			<div className="flex-1 flexCenter flex-col md:ml-10 ml-0 md:mt-0 mt-10 relative">
-				{features.map((index, feature) => (
+				{features.map((feature, index) => (
 					<FeatureCard key={feature.id} {...feature} index={index} />
 				))}
 			</div>
