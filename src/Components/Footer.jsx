@@ -5,18 +5,18 @@ const Footer = () => {
 	return (
 		<footer className="flexCenter paddingY flex-col ">
 			<div className="flexStart md:flex-row flex-col mb-8 w-full">
-				<div className="flex-1 flex flex-col justify-start mr-10">
+				<div className="flex-[1] flex flex-col justify-start mr-10">
 					<img
 						src={logo}
 						alt="hooBank"
-						className="w-[266px] h-[72px] object-contain"
+						className="w-[266px] h-[72.14px] object-contain"
 					/>
-					<p className="paragraph mt-4 max-w-[310px]">
+					<p className="paragraph mt-4 max-w-[312px]">
 						A new way to make the payments easy, reliable and
 						secure.
 					</p>
 				</div>
-				<div className="flex-1.5 w-full flex flex-row justify-between flex-wrap mt-10 md:mt-0">
+				<div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap mt-10 md:mt-0">
 					{footerLinks.map((footerLink) => (
 						<div
 							key={footerLink.key}

@@ -144,6 +144,9 @@
 }
 
 @layer components {
+	.marginY {
+		@apply sm:my-16 my-6;
+	}
 	.padding {
 		@apply sm:px-16 px-6 sm:py-12 py-4;
 	}
